@@ -1,0 +1,247 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body{
+    background-color: rgb(241, 239, 237);
+}
+
+/*메뉴바*/
+#menu {
+    background-color: orange;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px; /*메뉴바-채팅창 사이 간격*/
+}
+
+#menu ul {
+    margin: 0;
+    padding: 0;
+}
+
+#menu li {
+    float: left; /*순차정렬*/
+}
+
+#menu a {
+    display: block;
+    color: white;
+    font-weight: bolder;
+    text-align: center;
+    padding: 15px 80px;
+    padding-top: 80px;
+    text-decoration: none;
+}
+
+/*화면 분할*/
+.parent{
+    display: flex;
+}
+
+.left{
+    border-right: 2px solid #d8d8d8; /*왼쪽 회색선*/
+    float: left;
+    width: 25%;
+}
+
+.center{
+    float: left;
+    width: 50%;
+}
+
+.right{
+    border-left: 2px solid #d8d8d8; /*왼쪽 회색선*/
+    width: 25%;
+}
+
+
+/* 채팅화면 */
+#chat {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: auto;
+    height: calc(100vh - 250px); /* 채팅창 길이 */
+    overflow-y: auto; /* 세로 스크롤바 표시 */
+}
+
+/* 채팅화면 - 스크롤바 */
+#chat::-webkit-scrollbar {
+    width: 10px; /* 스크롤바 넓이 */
+}
+
+#chat::-webkit-scrollbar-thumb {
+    background: orange; /* 스크롤바 색 */
+    border-radius: 10px;
+}
+
+/* 채팅화면 - 말풍선 스타일 */
+.bot, .userBubble{
+	clear: both; /*말풍선 한줄에 하나씩*/
+}
+
+.bot li{
+    float: left;
+    padding: 5px; /*아이콘, 말풍선 사이 간격*/
+}
+.bot li>.icon{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #121212;
+}
+.botBubble, .userBubble {
+    box-shadow: 0px 2px 3px 0px rgb(190, 185, 185);
+    font-weight: bold;
+    padding: 10px;
+}
+
+.botBubble { /*챗봇 말풍선 스타일*/
+    border-radius: 0px 20px 20px 20px;
+    background-color: #f9d182;
+    color: #414040;
+    float: left; /*왼쪽 정렬*/
+    margin: 18px 0px; /*말풍선 위치를 아이콘보다 살짝 아래로*/
+}
+
+.userBubble { /*사용자 말풍선 스타일*/
+    border-radius: 20px 20px 0px 20px;
+    background-color: #f8f6f3;
+    color: #414040;
+    float: right; /*오른쪽 정렬*/
+    margin: 20px 0px; /*말풍선 사이 간격*/
+
+}
+
+.botBubble p {
+    margin: 0;
+}
+
+.userBubble p {
+    text-align: right;
+}
+
+
+/* 입력창 스타일 */
+#message-form {
+    margin: 20px auto;
+    display: flex;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-width: 500px;
+}
+
+#message-input {
+    flex-grow: 1;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 15px 0 0 15px;
+    border-style: solid;
+    /*border-color: orange;*/
+    border-top:solid orange;
+    border-left: solid orange;
+    border-bottom: solid orange;
+    border-right:rgb(241, 239, 237);
+    background-color: rgb(249, 249, 249);
+}
+
+#message-input:focus{
+    outline:none;
+}
+
+
+button {
+    padding: 15px 20px;
+    background-color: rgb(241, 239, 237);
+    border-radius: 0 15px 15px 0;
+    border-top:solid orange;
+    border-right: solid orange;
+    border-bottom: solid orange;
+    border-left:orange;
+    color: #414040;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: orange;
+    color: white;
+}
+
+
+/*반응형*/
+@media (max-width:500px){
+    #menu li a {
+        padding: 15px 25px;
+        padding-top: 80px;
+    }
+    .left {
+        border-right: 2px solid #e2e2e2;
+        width: 5%;
+    }
+    .center {
+        width: 90%;
+    }
+    .right {
+        border-left: 2px solid #e2e2e2;
+        width: 5%;
+    }
+}
+
+
+@media(min-width:501px) and (max-width:700px){
+    #menu li a {
+        padding: 15px 30px;
+        padding-top: 80px;
+    }
+    .left {
+        border-right: 2px solid #d8d8d8;
+        width: 10%;
+    }
+    .center {
+        width: 80%;
+    }
+    .right {
+        border-left: 2px solid #d8d8d8;
+        width: 10%;
+    }
+}
+
+@media(min-width:701px) and (max-width:1000px){
+    #menu li a {
+        padding: 15px 30px;
+        padding-top: 80px;
+    }
+    .left {
+        border-right: 2px solid #d8d8d8;
+        width: 10%;
+    }
+    .center {
+        width: 80%;
+    }
+    .right {
+        border-left: 2px solid #d8d8d8;
+        width: 10%;
+    }
+}
+
+@media(min-width:1001px) and (max-width:1500px){
+
+    .left {
+        border-right: 2px solid #d8d8d8;
+        width: 20%;
+    }
+    .center {
+        width: 60%;
+    }
+    .right {
+        border-left: 2px solid #d8d8d8;
+        width: 20%;
+    }
+
+}

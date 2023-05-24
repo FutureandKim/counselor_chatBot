@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+body{
+  background-color:rgb(241, 239, 237) ;
+}
+/*슬라이드 화면*/
+#introList {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+#introList ul#slide {
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#introList ul#slide li {
+  float: left;
+  position: relative;
+  height: 100vh;
+}
+
+#introList ul#slide li>div { /*페이지의 박스들 전체 위치, 넓이 설정*/
+  position: absolute;
+  left: 1vw;
+  top: 7vh;
+  width: 98vw;
+}
+
+.page{ /*각 박스들*/
+  height: 85vh;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
+  padding: 10px;
+}
+
+#first { /*첫번째 주황박스*/
+  border: 2px solid orange;
+  background-color: orange;
+  float: left;
+  width:33%;
+  box-sizing: border-box; /*박스 크기: 테두리 포함 크기*/
+}
+
+#second{ /*중간 박스*/
+  border: 2px solid rgb(197, 197, 197);
+  float: left;
+  margin-left: 0.5%; /*첫번째 박스와 여백*/
+  width:33%;
+  box-sizing: border-box;
+}
+
+#third{ /*마지막 주황 박스*/
+  border: 2px solid orange;
+  background-color: orange;
+  float: right;
+  width:33%;
+  box-sizing: border-box;
+}
+
+
+/*버튼*/
+/*1. 챗봇 사용하기 버튼*/
+.startButton {
+  position: absolute;
+  right: 70px;
+  bottom: 80px; /*위치*/
+  width: 120px;
+  height: 50px;
+  border-radius: 60px;
+  border: none;;
+  background-color:#f2f2f2e6;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, .3);
+  font-size: 15px;
+  font-weight: bold;
+  color: #ff9500;
+}
+
+.startButton:hover {
+  cursor: pointer;
+  color: white;
+  background-color: #ff9500be;
+}
+
+.startButton:active {
+  transform: scale(0.96);
+}
+
+
+/*2. 옆으로 넘기기 버튼*/
+.slider-btns {
+  position: absolute;
+  width: 65px;
+  height: 65px;
+  border-radius: 50px;
+  top: 45%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .3); /*110~114: 버튼 크기, 위치, 모양, 그림자 */
+  color: #f2f2f2;
+  font-weight:bold;
+  font-size: 30px;
+  font-family:cursive;
+  line-height: 65px; /*세로 가운데 정렬 (heigh값과 동일...?)*/
+  text-align: center; /*115~120: >,< 굵게, 크기, 폰트, 위치, 색상*/
+  cursor: pointer;
+}
+
+#previous {
+  left: 15px; /*버튼 위치*/
+}
+
+#next {
+  right: 15px; /*버튼 위치*/
+}
+
+.slider-btns:hover{
+  transform: scale(0.9); /*클릭시 작아지는 효과*/
+}
+
+
+
+
+/*하단 페이지 바*/
+#pageBar {
+  min-width: 20px;
+  margin-top: 93vh;
+  position: relative;
+  text-align: center;
+}
+
+#pageBar ul {
+  width: 100%;
+}
+
+#pageBar ul li {
+  margin: 0 4px; /*페이지바 사이 간격*/
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: rgba(252, 182, 53, 0.385);
+  position: relative;
+}
+
+#pageBar ul li.active {
+  width: 11px;
+  height: 11px;
+  top: 2px;
+  background: rgb(252, 182, 53);
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2) ;
+}
+
+#introList ul, #pageN ul li {
+  transition: all 0.7s ease-in-out; /*슬라이드 화면 전환*/
+}
+
+/*-webkit-transition, -webkit-box-shadow: 크롬 구버전에서 필요할 때가 있음*/
+
+
+

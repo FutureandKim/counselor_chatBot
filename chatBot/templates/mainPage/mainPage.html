@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<script type="text/javascript" src="/static/js/jquery-3.2.1.min.js"></script>
+    <head>
+        <title>AI chat</title>
+        <link type="text/css" rel="stylesheet" href="static/css/mainPage.css?after">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+<body>
+        <nav id ="menu"> <!--화면 상단 메뉴바-->
+            <ul>
+                <li><a href="startPage.html">메인화면</a></li>
+                <li><a href="introPage.html" target="_blank">챗봇소개</a></li>
+                <li><a href="http://www.theramotion.co.kr/" target="_blank">테라모션</a></li>
+            </ul>
+        </nav>
+
+        <div class ="parent">
+            <div class ="left" ></div>
+            <div class="center">
+                <div id="chat">
+                <div class="bot">
+                        <li><div class ="icon" style="overflow-y:auto"></div></li>
+                        <li>
+                            <div class="botBubble"> <!--챗봇말풍선-->
+                                <p>안녕하세요. 오늘 하루 어떠셨나요?</p>
+                            </div>
+                        </li>
+                </div>
+                <div class="userBubble" style="display:none;"> <p></p> </div> <!--사용자말풍선-->
+
+
+            </div>
+
+            <form id="form"> <!--입력창-->
+                <input type="text" name="message-input" id="message-input" placeholder="하고 싶은 이야기가 있나요?">
+                <button type="button" id="btn">전송</button>
+            </form>
+        </div>
+        <div class="right" ></div>
+    </div>
+
+<div class="userBubble" style="display:none;"> <p></p> </div> <!--사용자말풍선-->
+
+<script>
+    $('#btn').click(function () {
+    send();
+    });
+    $('#form').on('submit', function(e){
+       e.preventDefault();
+       send();
+    });
+    function send(){
+        $('#chat').append('<div class="userBubble"><span>'+$('#message-input').val()+'<span></div>');
+        $("#chat").scrollTop($("#chat")[0].scrollHeight);
+        console.log("serial"+$('form').serialize())
+        $.ajax({
+            url:  'http://127.0.0.1:8000/mainPage.html', //챗봇 api url
+            type: 'post',
+            dataType: 'json',
+            data: $('form').serialize(),
+            success: function(data) {
+                const botBubble = document.createElement('div');
+                botBubble.classList.add('bot');
+                botBubble.innerHTML = '<li><div class="icon"></div></li><li><div class="botBubble"><p>' + data.response + '</p></div></li>';
+                chat.appendChild(botBubble);
+                $("#chat").scrollTop($("#chat")[0].scrollHeight);
+            }
+        });
+        $('#message-input').val('');
+    }
+</script>
+</body>
+</html>
