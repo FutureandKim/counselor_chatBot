@@ -76,7 +76,6 @@
 }
 
 .bot li{
-    float: left;
     padding: 5px; /*아이콘, 말풍선 사이 간격*/
 }
 .bot li>.icon{
@@ -97,12 +96,12 @@
     background-color: #f9d182;
     color: #414040;
     float: left; /*왼쪽 정렬*/
-    margin: 18px 0px; /*말풍선 위치를 아이콘보다 살짝 아래로*/
+    margin: 3px 0px; /*말풍선 위치를 아이콘보다 살짝 아래로*/
 }
 
 .userBubble { /*사용자 말풍선 스타일*/
     border-radius: 20px 20px 0px 20px;
-    ackground-color: #f8f6f3;
+    background-color: #f8f6f3;
     color: #414040;
     float: right; /*오른쪽 정렬*/
     margin: 10px 0px; /*말풍선 사이 간격*/
