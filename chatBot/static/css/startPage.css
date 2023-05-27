@@ -14,6 +14,31 @@ html, body {
     box-shadow: 0 5px 5px 2px rgba(0, 0, 0, .3);
   }
 
+  h1{
+    color:rgb(105, 103, 103);
+    font-weight: bold;
+    animation: fadein 3s ease-in-out;
+  }
+
+  @keyframes fadein{
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: none;
+    }
+
+  }
+
+  .right{
+    display : flex;
+    justify-content : center;
+    align-items : center;
+    height: 80%;
+
+  }
 
   .startButton {
     position: absolute;

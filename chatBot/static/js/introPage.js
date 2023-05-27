@@ -46,16 +46,16 @@ function showSlides(n) {
     }
 
     slider.style.left = -(sliderWidth * slideIndex) + 'vw';
-    pagination();
+    pageBar();
 }
 
-//pagination
+//하단 페이지바
 slides.forEach(function () {
     var li = document.createElement('li');
     document.querySelector('#pageBar ul').appendChild(li);
 })
 
-function pagination() {
+function pageBar() {
     var dots = document.querySelectorAll('#pageBar ul li');
     dots.forEach(function (element) {
         element.classList.remove('active');
@@ -63,11 +63,7 @@ function pagination() {
     dots[slideIndex].classList.add('active');
 }
 
-pagination();
-var autoSlider = setInterval(function () {
-    plusSlides(1);
-}, 3000);
-
+pageBar();
 
 
 const start = document.querySelector('.startButton');
