@@ -64,7 +64,7 @@
             success: function(data) {
                 const botBubble = document.createElement('div');
                 botBubble.classList.add('bot');
-                botBubble.innerHTML = '<li><div class="icon"></div></li><li><div class="botBubble"><p>' + data.response + '</p></div></li>';
+                botBubble.innerHTML = '<li><div class ="icon" ><image class="tiger" src="/static/image/tiger.jpg" style="width:30px; height:30px;"></image></div></li><li><div class="botBubble"><p>' + data.response + '</p></div></li>';
                 chat.appendChild(botBubble);
                 $("#chat").scrollTop($("#chat")[0].scrollHeight);
             }
