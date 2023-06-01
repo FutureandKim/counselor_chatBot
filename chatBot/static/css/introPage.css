@@ -40,7 +40,7 @@ body{
   padding: 10px;
 }
 
-#first { /*첫번째 주황박스*/
+#first, #fourth { /*첫번째 주황박스*/
   border: 2px solid orange;
   background-color: orange;
   float: left;
@@ -48,7 +48,7 @@ body{
   box-sizing: border-box; /*박스 크기: 테두리 포함 크기*/
 }
 
-#second{ /*중간 박스*/
+#second, #fifth{ /*중간 박스*/
   border: 2px solid rgb(197, 197, 197);
   float: left;
   margin-left: 0.5%; /*첫번째 박스와 여백*/
@@ -56,7 +56,7 @@ body{
   box-sizing: border-box;
 }
 
-#third{ /*마지막 주황 박스*/
+#third, #sixth{ /*마지막 주황 박스*/
   border: 2px solid orange;
   background-color: orange;
   float: right;
@@ -64,6 +64,77 @@ body{
   box-sizing: border-box;
 }
 
+/*설명 내용*/
+h1{
+  color:rgb(86, 86, 86);
+  font-weight: bolder;
+}
+
+#first{
+  text-align: right;
+}
+
+.brain{
+  position: relative;
+  top: 130px;
+  right: 20px;
+}
+
+#first h1{
+  position: relative;
+  top: 200px;
+  right: 20px;
+  font-size: 35px;
+}
+
+
+#second h1{
+  position: relative;
+  top: 150px;
+  left: 20px;
+}
+
+
+.bubble{
+  float:right;
+  position: relative;
+  top: 130px;
+  width:300px;
+  height:170px;
+}
+
+.iPhone{
+  position: relative;
+  top: 80px;
+  left: 20px;
+  width:250px;
+  height:360px;
+}
+
+
+#third h1{
+  position: relative;
+  top: 150px;
+  text-align: right;
+  font-size: 35px;
+}
+
+#third h2{
+  color:rgb(86, 86, 86);
+  font-weight: bold;
+  position: relative;
+  text-align: left;
+  top: 200px;
+  font-size: 30px;
+}
+
+.bs{
+  position: relative;
+  top: 180px;
+  width:450px;
+  height:300px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, .3);
+}
 
 /*버튼*/
 /*1. 챗봇 사용하기 버튼*/
