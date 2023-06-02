@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'startPage', #챗봇 시작페이지
     'loginPage',
     'introPage',
+    'joinPage',
 ]
 
 MIDDLEWARE = [

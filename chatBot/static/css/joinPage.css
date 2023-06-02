@@ -1,0 +1,68 @@
+body {
+	background-color: rgb(241, 239, 237);
+}
+
+.center {
+    display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+
+form {
+	display: flex;
+	flex-direction: column; /*아래로 정렬*/
+}
+
+.title{
+    padding: 10px 30px;
+    align-items: center;
+    color:#818080;
+
+}
+
+.nameBirth {
+    display: flex;
+    align-items: center;
+}
+
+label { /*이름, 생년월일 글씨 부분*/
+	margin-bottom: 15px;
+    width: 100px;
+	font-size: 17px;
+	font-weight: bold;
+}
+
+input{ /*입력 창*/
+	padding: 10px;
+	border-radius: 5px;
+	border: 2px solid #818080;
+	margin-bottom: 15px; /*간격*/
+	font-size: 15px; /*폰트 크기*/
+    flex: 1;
+}
+
+input[type="date"] {
+	font-family: sans-serif; /*font*/
+}
+
+/*버튼*/
+button[type="submit"] {
+	background-color: orange;
+	color: #fff;
+	padding: 15px 30px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	margin-top: 15px;
+	font-size: 20px;
+}
+
+.btn button{
+	margin-right: 10px;
+}
+
+button:active{
+    transform: scale(0.96);
+  }

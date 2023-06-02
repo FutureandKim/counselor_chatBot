@@ -24,3 +24,8 @@ btn.addEventListener('click', function(e) {
     return;
   }
 });
+
+const start = document.querySelector('.register');
+start.addEventListener('click', () => {
+  window.open('joinPage.html', '_blank');
+});

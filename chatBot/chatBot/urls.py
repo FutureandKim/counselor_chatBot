@@ -26,4 +26,5 @@ urlpatterns = [
     path('introPage.html', include('introPage.urls')),
     path('loginPage.html', include('loginPage.urls')),
     path('mainPage.html', include('mainPage.urls')),
+    path('joinPage.html', include('joinPage.urls')),
 ]
