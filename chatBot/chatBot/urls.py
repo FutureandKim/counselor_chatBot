@@ -16,11 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.views.generic import RedirectView
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('startPage.html', include('startPage.urls')),
+    path('', RedirectView.as_view(url="/startPage.html", permanent=True)), #서버 접속시 startPage.html로 시작하게끔
     path('introPage.html', include('introPage.urls')),
     path('loginPage.html', include('loginPage.urls')),
     path('mainPage.html', include('mainPage.urls')),
