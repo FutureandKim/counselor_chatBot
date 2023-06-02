@@ -1,5 +1,5 @@
 const form = document.querySelector('form');
-const btn = document.querySelector('button[type="submit"]');
+const btn = document.querySelector('button[type="submit"].continue');
 
 btn.addEventListener('click', function(e) {
   e.preventDefault();

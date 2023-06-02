@@ -40,7 +40,7 @@ input[type="date"] {
 	font-family: sans-serif; /*font*/
 }
 
-/*continue 버튼*/
+/*버튼*/
 button[type="submit"] {
 	background-color: orange;
 	color: #fff;
@@ -51,6 +51,11 @@ button[type="submit"] {
 	margin-top: 15px;
 	font-size: 20px;
 }
+
+.btn button{
+	margin-right: 10px;
+}
+
 
 button:active{
     transform: scale(0.96);
