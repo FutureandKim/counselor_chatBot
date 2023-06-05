@@ -50,10 +50,14 @@ button[type="submit"] {
 	cursor: pointer;
 	margin-top: 15px;
 	font-size: 20px;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
 }
 
-.btn button{
-	margin-right: 10px;
+.join{
+	color: rgb(255, 153, 0);
+	text-decoration: underline;
+	font-weight: bold;
+	font-size: 14px;
 }
 
 

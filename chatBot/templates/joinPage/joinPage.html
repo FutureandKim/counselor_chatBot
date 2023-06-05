@@ -2,29 +2,27 @@
     <head>
         <title>chat join</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link type="text/css" rel="stylesheet" href="static/css/joinPage.css">
+        <link type="text/css" rel="stylesheet" href="static/css/joinPage.css?after">
 
     </head>
 
     <body>
         <div class = "center">
             <div class = "personal">
-                <form>
+                <form action="" method="POST">
+                    {% csrf_token %}
                     <div class ="title">
                         <h4>* 챗봇 사용을 위한 정보를 입력해주세요 *</h4>
                     </div>
                     <div class = "nameBirth">
-                        <label>이름 </label>
-                        <input type="text" name="name"><br>
+                        <label for="name">이름 </label>
+                        <input type="text" id="name" name="name"><br>
                     </div>
                     <div class = "nameBirth">
-                        <label>생년월일 </label>
-                        <input type="date" name="birth">
+                        <label for="birth">생년월일 </label>
+                        <input type="date" id="birth" name="birth">
                     </div>
-                    <div class = "btn">
                         <button type="submit" class = "register">REGISTER</button>
-                        <button type="submit" class = "continue">CONTINUE</button>
-                    </div>
                 </form>
             </div>
 

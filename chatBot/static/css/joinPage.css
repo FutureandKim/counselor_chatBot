@@ -37,7 +37,7 @@ label { /*이름, 생년월일 글씨 부분*/
 input{ /*입력 창*/
 	padding: 10px;
 	border-radius: 5px;
-	border: 2px solid #818080;
+	border: 1px solid #818080;
 	margin-bottom: 15px; /*간격*/
 	font-size: 15px; /*폰트 크기*/
     flex: 1;
@@ -57,6 +57,7 @@ button[type="submit"] {
 	cursor: pointer;
 	margin-top: 15px;
 	font-size: 20px;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
 }
 
 .btn button{
