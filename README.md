@@ -1,4 +1,4 @@
-# 💭 범불안장애를 위한 심리상담 챗봇
+# 💭 심리상담 챗봇
 <div align=center>
   <img src="https://github.com/FutureandKim/counselor_chatBot/assets/95979743/f0b2f6d9-4489-4127-90ba-19c3f3e7801d">
 </div>
